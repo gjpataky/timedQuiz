@@ -1,11 +1,14 @@
-var quizContainer = document.getElementById("quiz");
-var resultsContainer = document.getElementById("results");
-var submitButton = document.getElementById("submit");
 var questions = [
   {
     question: "Commonly used data types DO NOT include:",
     answers: ["strings", "booleans", "alerts", "numbers"],
     correctAnswer: "alerts"
+  },
+  {
+    question:
+      "The condition in an if / else statement is enclosed within ____.",
+    answers: ["quotes", "curly brackets", "parentheses", "square brackets"],
+    correctAnswer: "parentheses"
   }
 ];
 function generateQuiz(
@@ -101,3 +104,8 @@ function generateQuiz(
     showResults(questions, quizContainer, resultsContainer);
   };
 }
+var quizContainer = document.getElementById("quiz");
+var resultsContainer = document.getElementById("results");
+var submitButton = document.getElementById("submit");
+
+generateQuiz(questions, quizContainer, resultsContainer, submitButton);
