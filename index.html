@@ -4,13 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="quiz.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="quizzer.css" media="screen" />
     <title>Document</title>
   </head>
   <body>
-    <div id="quiz"></div>
-    <button id="submit">Get Results</button>
-    <div id="results"></div>
-    <script src="java.js"></script>
+    <!--create start button-->
+    <button id="startQuizBtn" onclick="startQuiz()">Start Quiz</button>
+    <!--create id for quiz, timer, and choices.  NOTE: Tutor recommended I use break function-->
+    <div id="quiz">
+      <label id="timeCounter"></label>
+      <div id="questionDiv">
+        <!--Tutor recommened I add p id and replace original div class with button id-->
+        <p id="question">Some question</p>
+        <!--Tutor recommended I use this.value to replace button id where my error occured-->
+        <button id="choice0" onclick="checkAnswer(this.value);"></button>
+        <br />
+        <button id="choice1" onclick="checkAnswer(this.value);"></button>
+        <br />
+        <button id="choice2" onclick="checkAnswer(this.value);"></button>
+        <br />
+        <button id="choice3" onclick="checkAnswer(this.value);"></button>
+        <br />
+      </div>
+    </div>
+    <!--create id for results-->
+    <button id="checkResBtn">Get Results</button>
+    <div id="resultsDiv"></div>
+    <!--tie html to javascript-->
+    <script src="quizzer.js"></script>
   </body>
 </html>
